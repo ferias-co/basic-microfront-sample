@@ -11,11 +11,14 @@ Layer responsible for containing the entities and business rules related to the 
 Representation of business entities
 
 
-### Application Business Rules Layer
+## Application Business Rules Layer
+Layer responsible for implementing the features related to the user story
+
 ### Features
 User story feature
 
 ## Interface Adapters Layer
+The "facade". The layer responsible for bridging high-level to low-level layers
 
 ### Controllers
 Controller workflow for User Interface Application
@@ -30,11 +33,14 @@ Configuration Layer
 User interfaces applications
 
 # Tests
-Usamos o xUnit como nossa estrutura de teste.
+We use xUnit as our test framework.
+
 ### Unit
 A straw-man examples of what our unit tests may look like can be found in test/Unit
+
 ### Integration
 A straw-man example of how we do integration testing can be found in test/Integration/RegisterSupplierFlow
+
 ### Run Tests
 ```shell
   dotnet test
