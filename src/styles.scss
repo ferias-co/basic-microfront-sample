@@ -1,0 +1,77 @@
+@import '../projects/microfront-sample/src/lib/shared/assets/styles/color.scss';
+.bs-rh-pagination {
+    margin-top: 40px;
+    float: right;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        float: right;
+        padding-left: 30px;
+    }
+    ul li {
+        float: left;
+    }
+    ul li a {
+        padding: 5px 10px;
+        text-decoration: none;
+    }
+    &.show {
+        opacity: 1;
+    }
+
+    .pagination-status-description {
+        margin-top: 4px;
+        float: left;
+    }
+
+    .pagination-prev,
+    .pagination-first,
+    .pagination-next,
+    .pagination-last {
+        margin-top: -9px;
+        a {
+            font-size: 29px;
+            padding: 0px 5px 2px;
+
+            border-color: transparent;
+            background-color: unset;
+        }
+
+        &.page-item.disabled .page-link {
+            color: #f5f5f5;
+        }
+    }
+
+    .pagination-first,
+    .pagination-last {
+        a {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+    }
+
+    .page-link {
+        border: unset;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+        margin: 0 5px;
+        color: $pedra_do_mar;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .page-item {
+        &.active .page-link {
+            z-index: 1;
+            background-color: $mergulho !important;
+            border-color: unset;
+            color: #ffffff;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .page-link {
+            margin: 0;
+        }
+    }
+}

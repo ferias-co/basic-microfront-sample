@@ -1,0 +1,139 @@
+@import 'https://shared-all-styles.s3.amazonaws.com/dev/styles/main.css';
+@import 'https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css';
+@import './color.scss';
+
+::ng-deep bs-daterangepicker-container {
+    left: 172px !important;
+}
+::ng-deep .bs-datepicker-head ,
+::ng-deep .theme-green .bs-datepicker-body table td span.selected
+  {
+    background-color: $mergulho !important;
+}
+::ng-deep .theme-green .bs-datepicker-body table td.week span {
+    color: $mergulho !important;
+}
+
+.bs-rh-pagination {
+    margin-top: 40px;
+    float: right;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        float: right;
+        padding-left: 30px;
+    }
+    ul li {
+        float: left;
+    }
+    ul li a {
+        padding: 5px 10px;
+        text-decoration: none;
+    }
+    &.show {
+      opacity: 1;
+    }
+  
+    .pagination-status-description {
+        margin-top: 4px;
+        float: left;
+    }
+    
+    .pagination-prev,
+    .pagination-first,
+    .pagination-next,
+    .pagination-last {
+        margin-top: -9px;
+        a {
+            font-size: 29px;
+            padding: 0px 5px 2px;
+            
+            border-color: transparent;
+            background-color: unset;
+            
+        }
+
+        &.page-item.disabled .page-link {
+            color: #f5f5f5; 
+        }
+    }
+
+    .pagination-first,
+    .pagination-last {
+        a {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+    }
+
+    .page-link {
+        border: unset;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+        margin: 0 5px;
+        color: $pedra_do_mar;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .page-item {
+
+        &.active .page-link {
+            z-index: 1;
+            background-color: $mergulho !important;
+            border-color: unset;
+            color: #ffffff;
+        }
+
+    }
+
+
+    @media (max-width: 380px) {
+        .page-link {
+            margin: 0;
+        }
+    }
+}
+
+.content-box {
+    *,
+    ::after,
+    ::before {
+        box-sizing: content-box;
+    }
+}
+.border-box {
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+}
+
+/* Modal - Início */
+.modal-header {
+    border-bottom: 0px;
+    padding: 15px;
+}
+
+.modal-title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: $mergulho;
+}
+.modal-body {
+    font-family: Roboto;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: $pedra_do_mar;
+}
+/* Modal - Fim */
+

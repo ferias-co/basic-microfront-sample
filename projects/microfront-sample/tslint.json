@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "fcMicrofrontSample",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "fc-microfront-sample",
+      "kebab-case"
+    ]
+  }
+}

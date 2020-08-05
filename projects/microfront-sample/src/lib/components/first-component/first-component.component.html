@@ -1,0 +1,7 @@
+<div class="first-component">
+    <h1><b>Primeira Página</b></h1>
+    <h4><b>Nome: {{name}}</b></h4>
+    <h4><b>Idade: {{age}}</b></h4>
+    <h4><b>CPF: {{(cpf ? (cpf | cpf) : '')}}</b></h4>
+    <button class="fc-btn fc-btn-light" (click)="goToSecondPageSample()">Segunda página</button>
+</div>
