@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'cpf'
+  name: 'cpfPipe'
 })
 
 export class CpfPipe implements PipeTransform {

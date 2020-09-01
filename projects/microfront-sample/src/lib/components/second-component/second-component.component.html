@@ -2,6 +2,6 @@
     <h1><b>Segunda Página</b></h1>
     <h4><b>Nome: {{name}}</b></h4>
     <h4><b>Idade: {{age}}</b></h4>
-    <h4><b>CPF: {{(cpf ? (cpf | cpf) : '')}}</b></h4>
+    <h4><b>CPF: {{(cpf ? (cpf | cpfPipe) : '')}}</b></h4>
     <button class="fc-btn fc-btn-light" id="btn-go-back" (click)="backToPreviousPage()">Voltar</button>
 </div>

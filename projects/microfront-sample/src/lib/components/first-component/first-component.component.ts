@@ -14,6 +14,7 @@ export class FirstComponentComponent implements OnInit {
   name = 'Maria';
   age = 18;
   cpf = '00578598736';
+  cnpj = '51895078000152';
 
   constructor(
     private microfrontSampleService: MicrofrontSampleService,
