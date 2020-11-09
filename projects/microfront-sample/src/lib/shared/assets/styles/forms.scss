@@ -1,0 +1,267 @@
+@import './colors';
+
+$input_border: #fbfbfb;
+$input_border_focus: solid 1px $mergulho;
+$input_border_focus_rh: solid 1px $passeio_noturno;
+$input_border_error: solid 1px $ceu_de_pipa;
+$input_border_error_focus: solid 1.5px $ceu_de_pipa;
+$checkbox_border: solid 1.5px #dedede;
+$font_color: $pedra_do_mar;
+$background_disabled: #eceeef;
+
+.form-group {
+
+  form,
+  .content {
+    height: 100%;
+  }
+
+  .input-field label {
+    width: 100%;
+  }
+
+
+  .field-description {
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .input-field {
+    margin-top: 5px;
+  }
+
+  select {
+    background: url('https://styles.ferias.co/images/icons/arrow_down.svg') no-repeat right;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    background-position: right 15px center;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .input-field {
+    display: block;
+    box-sizing: border-box;
+    border: solid 1px #e5e5e5;
+    color: $font_color;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+    background-color: #fbfbfb;
+    box-shadow: none;
+    /* Firefox */
+    line-height: inherit;
+    caret-color: $mergulho;
+    transition: border 0.2s, box-shadow 0.2s;
+
+    &:focus {
+      outline: none;
+      border: $input_border_focus;
+    }
+
+    &:valid~.input-field-label,
+    &:focus~.input-field-label {
+      top: -8px;
+      font-size: 12px;
+      background-color: white;
+      margin-right: 2px;
+      margin-left: 2px;
+      padding-right: 2px;
+      padding-left: 2px;
+    }
+
+    &:valid~.input-field-label {
+      color: #707070;
+    }
+
+    &.input-error {
+      outline: none;
+      border: $input_border_error;
+      caret-color: $ceu_de_pipa;
+
+      &:focus {
+        border: $input_border_error_focus;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $background_disabled;
+      color: #535252;
+      -webkit-text-fill-color: #969696;
+      opacity: 1;
+      border: solid 1px #dcdcdc;
+    }
+  }
+
+  select.input-field {
+    -webkit-border-radius: 2px;
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    font-size: inherit;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border: $input_border_focus;
+    }
+
+    &:disabled {
+      background-color: $background_disabled;
+      color: #535252;
+      -webkit-text-fill-color: #535252;
+      opacity: 1;
+      border: solid 1px #dcdcdc;
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+
+/*   -------------- RH --------------   */
+.form-rh {
+
+  .input-field,
+  select.dropdown {
+    caret-color: $passeio_noturno;
+
+    &:focus {
+      border: $input_border_focus_rh;
+    }
+  }
+
+  .checkbox_field {
+    .checkmark {
+      border-color: $passeio_noturno;
+      border: solid 2px #dcdcdc;
+
+      &:after {
+        border-color: $passeio_noturno;
+      }
+
+      &:hover {
+        border-color: $passeio_noturno;
+      }
+    }
+
+    input:checked~.checkmark {
+      border-color: $passeio_noturno;
+    }
+  }
+
+
+}
+
+/*   -------------- CHECKBOX --------------   */
+.checkbox_field {
+  display: block;
+  position: relative;
+  // margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  // line-height: 2rem;
+
+  label {
+    margin-left: 30px;
+    line-height: 27px;
+    display: block;
+  }
+
+  input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    position: relative;
+    top: 9px;
+    left: 5px;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    background-color: white;
+    border: solid 2px $mergulho;
+    display: block;
+
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      visibility: hidden;
+      left: 4px;
+      top: 0px;
+      width: 4px;
+      height: 9px;
+      border: solid $mergulho;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  input:checked~.checkmark {
+    border: solid 2px $mergulho;
+  }
+
+  input:disabled~.checkmark {
+    border: $checkbox_border;
+    background-color: $background_disabled;
+    cursor: not-allowed;
+
+    &:after {
+      border-color: #828282;
+    }
+  }
+
+  input[checked="true"]~.checkmark:after,
+  input[checked]~.checkmark:after {
+    visibility: visible;
+  }
+
+
+}
+
+
+.error-message {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  border: solid 1px #ce3a3c;
+  background-color: #fcd3cd;
+  color: #ce3a3c;
+  font-size: 1rem;
+  position: relative;
+  margin-top: 5px;
+
+  a {
+    text-decoration: underline;
+    color: #ce3a3c;
+  }
+}

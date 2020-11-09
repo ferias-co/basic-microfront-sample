@@ -1,27 +1,65 @@
-# BasicMicrofrontSample
+# Microfront Sample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.11.
+## Requirements
 
-## Development server
+* [Nodejs](https://nodejs.org/)
+* [Angular CLI](https://github.com/angular/angular-cli) v8.0.6.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Clone project
 
-## Code scaffolding
+```bash
+$ git clone --recurse-submodules https://github.com/ferias-co/basic-microfront-sample.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Install dependencies
 
-## Build
+```bash
+$ npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Download Docker Images
 
-## Running unit tests
+```bash
+$ docker-compose pull
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Start Backend using Docker
 
-## Running end-to-end tests
+```bash
+$ docker-compose up --build
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Build library
 
-## Further help
+```bash
+$ ng build movimento-reserva --watch
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Note: The `--watch` statement makes the project listen to changes in the `project/movimento-reserva/src` folder and automatically rebuild.
+
+### Start main project
+
+```bash
+$ ng serve -o
+```
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the main project source files.
+
+
+### Build main project
+
+```bash
+$ ng build
+```
+
+### Lint
+
+```bash
+$ npm run lint
+```
+
+### Unit Test
+To execute the unit tests via Karma.
+```bash
+$ ng test
+```

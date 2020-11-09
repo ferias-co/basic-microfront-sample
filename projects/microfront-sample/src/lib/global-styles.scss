@@ -1,0 +1,15 @@
+/* Importe aqui os estilos aplicados a todos os componentes */
+/* Importe nos componentes esse arquivo global-styles.scss */
+
+@import './shared/assets/styles/colors';
+@import './shared/assets/styles/text';
+@import './shared/assets/styles/buttons';
+@import './shared/assets/styles/forms';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}

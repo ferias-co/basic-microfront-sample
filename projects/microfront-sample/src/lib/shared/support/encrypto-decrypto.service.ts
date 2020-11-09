@@ -7,7 +7,6 @@ import * as CryptoJS from 'crypto-js';
 
 export class EncryptoDecryptoService {
   keys = '959952$#@$^@9FEC';
-  constructor() { }
 
   // The set method is use for encrypt the value.
   set(value) {

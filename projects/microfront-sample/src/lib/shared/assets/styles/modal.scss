@@ -1,0 +1,31 @@
+@import './color';
+
+/* Modal - Início */
+.modal-header {
+    border-bottom: 0px;
+    padding: 15px;
+}
+
+.modal-title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: $mergulho;
+}
+.modal-body {
+    font-family: Roboto;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: $pedra_do_mar;
+}
+/* Modal - Fim */
+

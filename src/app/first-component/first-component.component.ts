@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,13 +6,10 @@ import { Router } from '@angular/router';
   templateUrl: './first-component.component.html',
   styleUrls: ['./first-component.component.scss']
 })
-export class FirstComponentComponent implements OnInit {
+export class FirstComponentComponent {
 
   constructor(
     private router: Router) { }
-
-  ngOnInit(): void {
-  }
 
   goToDetailPage(event: any) {
     this.router.navigate([`basic-microfront-sample/detail/${event}`]);

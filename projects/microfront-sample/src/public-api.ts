@@ -2,7 +2,6 @@
  * Public API Surface of microfront-sample
  */
 
-export * from './lib/microfront-sample.component';
 export * from './lib/microfront-sample.module';
 
 export * from './lib/components/first-component/first-component.component';

@@ -1,0 +1,226 @@
+@import "./colors";
+
+$color_btn_dark: $pedra_do_mar;
+$color_btn_secondary: $color-secondary;
+$color_btn_success: $mergulho;
+$color_btn_danger: $ceu_de_pipa;
+$color_btn_warning: $horizonte;
+$color_btn_light: $mergulho;
+$color_btn_success_rh: $passeio_noturno;
+$color_btn_disabled: #f5f5f5;
+
+$font_size_btn_sm: 16px;
+$font_size_btn_lg: 20px;
+
+button {
+  cursor: pointer;
+}
+
+.fc-btn {
+  min-width: 100px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 0px;
+  border-radius: 5px;
+  border-color: transparent;
+  padding: 0px 15px;
+  height: 40px;
+
+  &.fc-btn-success:disabled,
+  &.fc-btn-dark:disabled,
+  &.fc-btn-primary:disabled,
+  &.fc-btn-secondary:disabled,
+  &.fc-btn-success-rh:disabled,
+  &.fc-btn-danger:disabled,
+  &.fc-btn-warning:disabled,
+  &.fc-btn-light:disabled {
+    color: #bebebe;
+    background-color: $color_btn_disabled;
+    border: 0px;
+    cursor: auto;
+  }
+
+  &:active {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.fc-btn-dark {
+  color: white;
+  background-color: $color_btn_dark;
+
+  &:hover {
+    background-color: darken($color: $color_btn_dark, $amount: 5%);
+    border-color: transparent;
+  }
+
+  &:active {
+    background-color: darken($color: $color_btn_dark, $amount: 10%);
+    border-color: transparent;
+  }
+}
+
+.fc-btn-secondary {
+  color: $pedra_do_mar;
+  background-color: $color_btn_secondary;
+
+  &:hover {
+    color: $pedra_do_mar;
+    background-color: darken($color: $color_btn_secondary, $amount: 5%);
+  }
+  &:active {
+    color: $pedra_do_mar;
+    background-color: darken($color: $color_btn_secondary, $amount: 10%);
+  }
+}
+
+.fc-btn-success {
+  color: white;
+  background-color: $color_btn_success;
+
+  &:hover {
+    background-color: darken($color: $color_btn_success, $amount: 5%);
+  }
+
+  &:active {
+    background-color: darken($color: $color_btn_success, $amount: 10%);
+  }
+}
+
+.fc-btn-success-rh {
+  color: white;
+  background-color: $color_btn_success_rh;
+
+  &:hover {
+    background-color: darken($color: $color_btn_success_rh, $amount: 5%);
+  }
+
+  &:active {
+    background-color: darken($color: $color_btn_success_rh, $amount: 10%);
+  }
+}
+
+.fc-btn-danger {
+  color: white;
+  background-color: $color_btn_danger;
+
+  &:hover {
+    background-color: darken($color: $color_btn_danger, $amount: 5%);
+  }
+  &:active {
+    background-color: darken($color: $color_btn_danger, $amount: 10%);
+  }
+}
+
+.backoffice-content.modal-footer .btn {
+  height: 40px !important;
+}
+
+.backoffice-content.modal-footer .fc-btn-light {
+  color: $color_btn_light !important;
+  border: solid 1px $color_btn_light !important;
+  background-color: white !important;
+
+  &:focus {
+    border: solid 1px $color_btn_success !important;
+  }
+
+  &:hover {
+    color: white !important;
+    border: 0px !important;
+    background-color: darken($color: $color_btn_success, $amount: 5%) !important;
+  }
+
+  &:active {
+    color: white !important;
+    border: 0px !important;
+    background-color: darken($color: $color_btn_success, $amount: 10%) !important;
+  }
+}
+
+.backoffice-content.modal-footer .fc-btn-success {
+  color: white !important;
+  background-color: $color_btn_success !important;
+
+  &:hover {
+    background-color: darken($color: $color_btn_success, $amount: 5%) !important;
+  }
+
+  &:active {
+    background-color: darken($color: $color_btn_success, $amount: 10%) !important;
+  }
+}
+
+.fc-btn-warning {
+  color: white;
+  background-color: $color_btn_warning;
+
+  &:hover {
+    background-color: darken($color: $color_btn_warning, $amount: 5%);
+  }
+  &:active {
+    background-color: darken($color: $color_btn_warning, $amount: 10%);
+  }
+}
+
+.fc-btn-light {
+  color: $color_btn_light;
+  border: solid 1px $color_btn_light;
+  background-color: white;
+
+  &:focus {
+    border: solid 1px $color_btn_success;
+  }
+
+  &:hover {
+    color: white;
+    border: 0px;
+    background-color: darken($color: $color_btn_success, $amount: 5%);
+  }
+
+  &:active {
+    color: white;
+    border: 0px;
+    background-color: darken($color: $color_btn_success, $amount: 10%);
+  }
+}
+
+.fc-btn-light-danger {
+  color: $color_btn_danger;
+  border: solid 1px $color_btn_danger;
+  background-color: white;
+
+  &:focus {
+    border: solid 1px $color_btn_danger;
+  }
+
+  &:hover {
+    color: white;
+    border: 0px;
+    background-color: darken($color: $color_btn_danger, $amount: 5%);
+  }
+
+  &:active {
+    color: white;
+    border: 0px;
+    background-color: darken($color: $color_btn_danger, $amount: 10%);
+  }
+}
+
+.fc-btn-sm {
+  font-size: $font_size_btn_sm;
+  height: 30px;
+}
+
+.fc-btn-lg {
+  font-size: $font_size_btn_lg;
+  height: 50px;
+}

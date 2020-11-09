@@ -1,5 +1,5 @@
-import { Injectable, Inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { EncryptoDecryptoService } from './encrypto-decrypto.service';
 import SubscriberModel from '../../models/subscriber.model';
 import { String } from 'typescript-string-operations';
@@ -14,7 +14,7 @@ export class Common {
   getUrlSearchParams(actRouter: ActivatedRoute): SubscriberModel {
     let subscriber: SubscriberModel;
     actRouter.params.forEach((a) => {
-      if (a.parameter != null) {
+      if (a.parameter) {
         subscriber = new SubscriberModel();
 
         const param = this.EncryptoDecrypto.get(decodeURIComponent(a.parameter));

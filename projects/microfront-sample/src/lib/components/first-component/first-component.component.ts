@@ -32,7 +32,7 @@ export class FirstComponentComponent implements OnInit {
         this.age = result.Persons[0].age;
       }
     }).catch(exception => {
-      console.log('erro: ', exception);
+      console.error('erro: ', exception);
     });
   }
 

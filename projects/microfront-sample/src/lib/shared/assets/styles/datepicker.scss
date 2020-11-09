@@ -1,0 +1,14 @@
+@import 'https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css';
+@import './colors';
+
+::ng-deep bs-daterangepicker-container {
+    left: 172px !important;
+}
+::ng-deep .bs-datepicker-head ,
+::ng-deep .theme-green .bs-datepicker-body table td span.selected
+  {
+    background-color: $mergulho !important;
+}
+::ng-deep .theme-green .bs-datepicker-body table td.week span {
+    color: $mergulho !important;
+}
