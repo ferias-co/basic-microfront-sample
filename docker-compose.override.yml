@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  api-movimento-reserva:
+    ports:
+      - "32610:80"
+    environment:
+      - "NODE_ENV=development"
+
+  microservice-movimento-reserva:
+    ports:
+      - "32224:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+  mongo:
+    ports:
+      - "27016:27017"
+  mongo-express:
+    image: mongo-express
+    ports:
+      - "8081"

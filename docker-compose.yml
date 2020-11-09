@@ -1,0 +1,24 @@
+version: '3.5'
+
+services:
+  api-movimento-reserva:
+    image: 957296915963.dkr.ecr.us-east-1.amazonaws.com/api-movimento-reserva:latest
+    environment: 
+      - NODE_ENV=development
+
+  microservice-movimento-reserva:
+      image: 957296915963.dkr.ecr.us-east-1.amazonaws.com/microservice-movimento-reserva:latest
+      depends_on:
+        - "mongo"
+      environment:
+      - "MongoDbMovimentoReservaConfiguration__ConnectionString=mongodb://mongo"
+
+  mongo:
+    image: mongo:4.2
+    volumes:
+      - "./mongo-fixtures/mongoMovimentoReserva.js:/docker-entrypoint-initdb.d/mongoMovimentoReserva.js"  
+      - "./mongo-fixtures/mongoFornecedor.js:/docker-entrypoint-initdb.d/mongoFornecedor.js"
+  mongo-express:
+    image: mongo-express
+    depends_on:
+      - "mongo"
