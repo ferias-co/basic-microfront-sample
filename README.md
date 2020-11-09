@@ -32,10 +32,10 @@ $ docker-compose up --build
 ### Build library
 
 ```bash
-$ ng build movimento-reserva --watch
+$ ng build microfront-sample --watch
 ```
 
-Note: The `--watch` statement makes the project listen to changes in the `project/movimento-reserva/src` folder and automatically rebuild.
+Note: The `--watch` statement makes the project listen to changes in the `project/microfront-sample/src` folder and automatically rebuild.
 
 ### Start main project
 
